@@ -4,10 +4,10 @@ use std::io::{self, Write};
 #[derive(Debug)]
 struct PixelData{
     alpha : u8,
-    red : u8,
-    green : u8,
+    cyan : u8,
+    magenta : u8,
     blue : u8,
-    emit : u8,
+    black : u8,
     shine : u8,
     x: f64,
     y: f64,
@@ -38,6 +38,7 @@ fn main() {
         }
     }
 
-    let mut _pixel = PixelData{ alpha : 255, red: 0, green: 0, blue:0 , emit:0 , shine: 0,  x:0.0 , y:0.0 , z:0.0, shape:"pixel".to_string()};
+    let mut _pixel = PixelData{ alpha : 255, cyan: 0, magenta: 0, blue:0 , black :0 , shine: 0,  x:0.0 , y:0.0 , z:0.0, shape:"pixel".to_string()};
     println!("{:?}", _pixel);
 }
+  
