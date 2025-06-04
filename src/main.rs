@@ -1,6 +1,7 @@
 use std::fs;
 use std::io::{self, Write}; 
 
+
 #[derive(Debug)]
 struct PixelData{
     alpha : u8,
@@ -16,7 +17,10 @@ struct PixelData{
 }
 
 fn main() {
-
+    let mut pixelNumber : u128;
+    let mut maxDotts : u128 ;
+    let mut colorRGBfromCMYK : String;
+    maxDotts = 1000;
     print!("Please enter the file path: ");
     io::stdout().flush().expect("Failed to flush stdout"); 
 
@@ -37,8 +41,12 @@ fn main() {
             eprintln!("Error reading file '{}': {}", file_path, err);
         }
     }
-
+    pixelNumber = 0;
+    while pixelNumber <maxDotts
+    {
+        pixelNumber +=1;
     let mut _pixel = PixelData{ alpha : 255, cyan: 0, magenta: 0, blue:0 , black :0 , shine: 0,  x:0.0 , y:0.0 , z:0.0, shape:"pixel".to_string()};
     println!("{:?}", _pixel);
+    }
 }
   
