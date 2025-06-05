@@ -1,13 +1,26 @@
-use std::fs;
+use std::{char, fs};
 use std::io::{self, Write}; 
+use plotters::chart::{self, ChartState};
+use plotters::coord::cartesian;
 use plotters::prelude::*;
 
-use gif::{Encoder, Frame, Repeat};
+
 use std::fs::File;
 use std::io::BufWriter;
 
 
-#[derive(Debug)]
+
+pub fn draw_pixel_cmyk(
+    ozx: f64,        // X-coordinate
+    ozy: f64,        // Y-coordinate
+    ozcyan: f32,     // Cyan component (0.0 to 1.0)
+    ozmagenta: f32,  // Magenta component (0.0 to 1.0)
+    ozyellow: f32,   // Yellow component (0.0 to 1.0)
+    ozk: f32,        // Black (Key) component (0.0 to 1.0)
+) {
+
+
+}
 struct PixelData{
     alpha : u8,
     cyan : f32,
@@ -20,13 +33,15 @@ struct PixelData{
     z: f64,
     shape : String,
 }
-struct CmykColor {
-    cyan_c: f32,    
-    magenta_c: f32,
-    yellow_c: f32,
-    key_c: f32,    
-}
+
 fn main()  -> Result<(), Box<dyn std::error::Error>> {
+    let mut ocy :f64;
+    let mut ocx : f64;
+    let mut occyan : f32;
+    let mut ocmagenta :f32;
+    let mut ocyellow : f32;
+    let mut ock : f32;
+
     let mut pixelNumber : u128;
     let mut maxDotts : u128 ;
     let mut colorRGBfromCMYK : String;
@@ -36,11 +51,20 @@ fn main()  -> Result<(), Box<dyn std::error::Error>> {
           
     pixelNumber = 0;
     while pixelNumber <maxDotts {
+ 
+        ocy = 0.0;
+        ocx = 0.0;
+        occyan = 1.0;
+        ocmagenta = 1.0;
+        ocyellow = 1.0;
+        ock = 1.0;
         pixelNumber +=1;
-        let mut _pixel = PixelData{ alpha : 255, cyan: 1.0, magenta: 1.0, yellow:1.0 , key :1.0 , shine: 0,  x:0.0 , y:0.0 , z:0.0, shape:"pixel".to_string()};
-        println!("{:?}", _pixel);
+        //let mut _pixel = PixelData{ alpha : 255, cyan: 1.0, magenta: 1.0, yellow:1.0 , key :1.0 , shine: 0,  x:0.0 , y:0.0 , z:0.0, shape:"pixel".to_string()};
+        println!("pixel.");
+        draw_pixel_cmyk(ocy,ocx,occyan,ocmagenta,ocyellow,ock);
     }
     Ok(())
 }
+
 
 
