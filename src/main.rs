@@ -17,6 +17,7 @@ pub fn draw_pixel_cmyk(
     ozmagenta: f32,  // Magenta component (0.0 to 1.0)
     ozyellow: f32,   // Yellow component (0.0 to 1.0)
     ozk: f32,        // Black (Key) component (0.0 to 1.0)
+    ozalpha: f32,
 ) {
 
 
@@ -41,7 +42,7 @@ fn main()  -> Result<(), Box<dyn std::error::Error>> {
     let mut ocmagenta :f32;
     let mut ocyellow : f32;
     let mut ock : f32;
-
+    let mut ocalpha: f32;
     let mut pixelNumber : u128;
     let mut maxDotts : u128 ;
     let mut colorRGBfromCMYK : String;
@@ -58,13 +59,13 @@ fn main()  -> Result<(), Box<dyn std::error::Error>> {
         ocmagenta = 1.0;
         ocyellow = 1.0;
         ock = 1.0;
+        ocalpha = 1.0;
         pixelNumber +=1;
-        //let mut _pixel = PixelData{ alpha : 255, cyan: 1.0, magenta: 1.0, yellow:1.0 , key :1.0 , shine: 0,  x:0.0 , y:0.0 , z:0.0, shape:"pixel".to_string()};
-        println!("pixel.");
-        draw_pixel_cmyk(ocy,ocx,occyan,ocmagenta,ocyellow,ock);
+        
+        println!("pixel.{pixelNumber}.to_string()");
+        draw_pixel_cmyk(ocy,ocx,occyan,ocmagenta,ocyellow,ock,ocalpha);
     }
     Ok(())
 }
-
 
 
