@@ -11,13 +11,13 @@ use std::io::BufWriter;
 
 
 pub fn draw_pixel_cmyk(
-    ozx: f64,        // X-coordinate
-    ozy: f64,        // Y-coordinate
-    ozcyan: f32,     // Cyan component (0.0 to 1.0)
-    ozmagenta: f32,  // Magenta component (0.0 to 1.0)
-    ozyellow: f32,   // Yellow component (0.0 to 1.0)
-    ozk: f32,        // Black (Key) component (0.0 to 1.0)
-    ozalpha: f32,
+    ax: f64,        // X-coordinate
+    ay: f64,        // Y-coordinate
+    acyan: f32,     // Cyan component (0.0 to 1.0)
+    amagenta: f32,  // Magenta component (0.0 to 1.0)
+    ayellow: f32,   // Yellow component (0.0 to 1.0)
+    ak: f32,        // Black (Key) component (0.0 to 1.0)
+    aalpha: f32,
 ) {
 
 
@@ -25,13 +25,13 @@ pub fn draw_pixel_cmyk(
 
 
 fn main()  -> Result<(), Box<dyn std::error::Error>> {
-    let mut ocy :f64;
-    let mut ocx : f64;
-    let mut occyan : f32;
-    let mut ocmagenta :f32;
-    let mut ocyellow : f32;
-    let mut ock : f32;
-    let mut ocalpha: f32;
+    let mut by :f64;
+    let mut bx : f64;
+    let mut bcyan : f32;
+    let mut bmagenta :f32;
+    let mut byellow : f32;
+    let mut bk : f32;
+    let mut balpha: f32;
     let mut pixelNumber : u128;
     let mut maxDotts : u128 ;
     let mut colorRGBfromCMYK : String;
@@ -42,17 +42,17 @@ fn main()  -> Result<(), Box<dyn std::error::Error>> {
     pixelNumber = 0;
     while pixelNumber <maxDotts {
  
-        ocy = 0.0;
-        ocx = 0.0;
-        occyan = 1.0;
-        ocmagenta = 1.0;
-        ocyellow = 1.0;
-        ock = 1.0;
-        ocalpha = 1.0;
+        by = 0.0;
+        bx = 0.0;
+        bcyan = 1.0;
+        bmagenta = 1.0;
+        byellow = 1.0;
+        bck = 1.0;
+        bcalpha = 1.0;
         pixelNumber +=1;
         
-        println!("pixel.{pixelNumber}.x{ocy}.y{ocx}c.{occyan}m.{ocmagenta}y.{ocyellow}k.{ock}a.{ocalpha}.end");
-        draw_pixel_cmyk(ocy,ocx,occyan,ocmagenta,ocyellow,ock,ocalpha);
+        println!("pixel.{pixelNumber}.x{by}.y{bx}c.{bcyan}m.{bmagenta}y.{byellow}k.{bck}a.{bcalpha}.end");
+        draw_pixel_cmyk(by,bx,bcyan,bmagenta,byellow,bck,bcalpha);
     }
     Ok(())
 }
