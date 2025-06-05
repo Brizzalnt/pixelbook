@@ -22,18 +22,7 @@ pub fn draw_pixel_cmyk(
 
 
 }
-struct PixelData{
-    alpha : u8,
-    cyan : f32,
-    magenta : f32,
-    yellow : f32,
-    key: f32,
-    shine : u8,
-    x: f64,
-    y: f64,
-    z: f64,
-    shape : String,
-}
+
 
 fn main()  -> Result<(), Box<dyn std::error::Error>> {
     let mut ocy :f64;
