@@ -56,5 +56,39 @@ fn main()  -> Result<(), Box<dyn std::error::Error>> {
     }
     Ok(())
 }
-
+fn creator(){
+    
+    let cy = 0.0;
+    let cx = 0.0;
+    let ccyan = 1.0;
+    let cmagenta = 1.0;
+    let cyellow = 1.0;
+    let ck = 1.0;
+    let ccalpha = 0.0;
+    let pixelNumber =1;
+    let mut datastring = String::new();
+    let maxDotts: u128=1000;
+    while pixelNumber<maxDotts {
+        
+    
+    datastring += &pixelNumber.to_string();
+    datastring += "p";
+    datastring += &cy.to_string();
+    datastring += "y";
+    datastring += &cx.to_string();
+    datastring += "x";
+    datastring += &ccyan.to_string();
+    datastring += "c";
+    datastring += &cmagenta.to_string();
+    datastring += "m";
+    datastring += &cyellow.to_string();
+    datastring += "y";
+    datastring += &ck.to_string();
+    datastring += "k";
+    datastring += &calpha.to_string();
+    datastring += "a";  
+    
+    }
+    println!("{datastring}");
+}
 
