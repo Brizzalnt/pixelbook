@@ -62,7 +62,7 @@ fn main()  -> Result<(), Box<dyn std::error::Error>> {
         ocalpha = 1.0;
         pixelNumber +=1;
         
-        println!("pixel.{pixelNumber}.to_string()");
+        println!("pixel.{pixelNumber}.x{ocy}.y{ocx}c.{occyan}m.{ocmagenta}y.{ocyellow}k.{ock}a.{ocalpha}.end");
         draw_pixel_cmyk(ocy,ocx,occyan,ocmagenta,ocyellow,ock,ocalpha);
     }
     Ok(())
