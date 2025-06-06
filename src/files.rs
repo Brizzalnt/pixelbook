@@ -25,12 +25,17 @@ pub fn run() {
     let separator = ','; 
 
 
-
+    let mut indexer = 0;
     match read_file_into_vec_by_separator(filepath, separator) {
         Ok(data) => {
             println!("Contents of the file, split by '{}':", separator);
             for (i, item) in data.iter().enumerate() {
-                println!("{}: \"{}\"", i, item);
+                print!("{}: \"{}\"", i, item);
+                indexer +=1;
+                if indexer > 7{
+                    indexer = 0;
+                    println!("pixel end.")
+                }
             }
         }
         Err(e) => {
