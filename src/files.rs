@@ -23,6 +23,7 @@ pub fn read_file_into_vec_by_separator(
 pub fn run() {
     let filepath = "my_file.dott";
     let separator = ','; 
+    let mut arraystore: [f32;8] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
 
 
     let mut indexer:usize = 0;
@@ -31,36 +32,23 @@ pub fn run() {
         Ok(data) => {
             println!("Contents of the file, split by '{}':", separator);
             for (i, item) in data.iter().enumerate() {
-                let mut labeler: String;
-                let x2 = String::from("x");
-                let y2: String = String::from("y");
-                let z2 = String::from("z");
-                let c2 = String::from("cyan");
-                let m2: String = String::from("magenta");
-                let y3 = String::from("yellow");
-                let k2 = String::from("black");
-                let a2: String = String::from("alpha");
-                let end: String = String::from("!");
-                
-                
-
-            
+                let mut item2 = item.parse::<f32>().unwrap();
                 indexer +=1;
                 match indexer{
-                    1 => labeler = x2.to_string(),
-                    2 => labeler = y2.to_string(),
-                    3 => labeler = z2.to_string(),
-                    4 => labeler = c2.to_string(),
-                    5 => labeler = m2.to_string(),
-                    6 => labeler = y3.to_string(),
-                    7 => labeler = k2.to_string(),
-                    8 => labeler = a2.to_string(),
-                    _ => labeler = end.to_string()
+                    1 => arraystore[0] = item2,
+                    2 => arraystore[1] = item2,
+                    3 => arraystore[2] = item2,
+                    4 => arraystore[3] = item2,
+                    5 => arraystore[4] = item2,
+                    6 => arraystore[5] = item2,
+                    7 => arraystore[6] = item2,
+                    8 => arraystore[7] = item2,
+                    _ => print!("unexpected")
                 }
-                print!("{}: \"{}\"", labeler, item);
+                
                 if indexer == 8{
                     indexer = 0;
-                    println!("")
+                    println!("finished array!")
                 }
             }
         }
