@@ -11,8 +11,8 @@ use std::io::BufWriter;
 
 
 pub fn draw_pixel_cmyk(
-    ax: f64,        // X-coordinate
-    ay: f64,        // Y-coordinate
+    ax: f32,        // X-coordinate
+    ay: f32,        // Y-coordinate
     acyan: f32,     // Cyan component (0.0 to 1.0)
     amagenta: f32,  // Magenta component (0.0 to 1.0)
     ayellow: f32,   // Yellow component (0.0 to 1.0)
@@ -26,8 +26,8 @@ pub fn draw_pixel_cmyk(
 
 fn main()  -> Result<(), Box<dyn std::error::Error>> {
     files::run();
-    let mut cy :f64;
-    let mut cx : f64;
+    let mut cy :f32;
+    let mut cx : f32;
     let mut ccyan : f32;
     let mut cmagenta :f32;
     let mut cyellow : f32;
