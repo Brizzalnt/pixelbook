@@ -2,7 +2,7 @@ use std::{char, fs};
 use std::io::{self, Write}; 
 use plotters::chart::{self, ChartState};
 use plotters::coord::cartesian;
-use plotters::prelude::*;
+use plotters::{data, prelude::*};
 
 
 use std::fs::File;
@@ -25,38 +25,17 @@ pub fn draw_pixel_cmyk(
 
 
 fn main()  -> Result<(), Box<dyn std::error::Error>> {
-    let mut by :f64;
-    let mut bx : f64;
-    let mut bcyan : f32;
-    let mut bmagenta :f32;
-    let mut byellow : f32;
-    let mut bk : f32;
-    let mut balpha: f32;
+    let mut cy :f64;
+    let mut cx : f64;
+    let mut ccyan : f32;
+    let mut cmagenta :f32;
+    let mut cyellow : f32;
+    let mut ck : f32;
+    let mut calpha: f32;
     let mut pixelNumber : u128;
     let mut maxDotts : u128 ;
-    let mut colorRGBfromCMYK : String;
-    maxDotts = 1000;
-
-
-          
-    pixelNumber = 0;
-    while pixelNumber <maxDotts {
- 
-        by = 0.0;
-        bx = 0.0;
-        bcyan = 1.0;
-        bmagenta = 1.0;
-        byellow = 1.0;
-        bck = 1.0;
-        bcalpha = 1.0;
-        pixelNumber +=1;
-        
-        println!("pixel.{pixelNumber}.x{by}.y{bx}c.{bcyan}m.{bmagenta}y.{byellow}k.{bck}a.{bcalpha}.end");
-        draw_pixel_cmyk(by,bx,bcyan,bmagenta,byellow,bck,bcalpha);
-    }
-    Ok(())
-}
-fn creator(){
+    let mut Datastring : String;
+    maxDotts = 1;
     
     let cy = 0.0;
     let cx = 0.0;
@@ -64,31 +43,17 @@ fn creator(){
     let cmagenta = 1.0;
     let cyellow = 1.0;
     let ck = 1.0;
-    let ccalpha = 0.0;
-    let pixelNumber =1;
-    let mut datastring = String::new();
-    let maxDotts: u128=1000;
-    while pixelNumber<maxDotts {
-        
-    
-    datastring += &pixelNumber.to_string();
-    datastring += "p";
-    datastring += &cy.to_string();
-    datastring += "y";
-    datastring += &cx.to_string();
-    datastring += "x";
-    datastring += &ccyan.to_string();
-    datastring += "c";
-    datastring += &cmagenta.to_string();
-    datastring += "m";
-    datastring += &cyellow.to_string();
-    datastring += "y";
-    datastring += &ck.to_string();
-    datastring += "k";
-    datastring += &calpha.to_string();
-    datastring += "a";  
-    
+    let calpha = 0.0;
+    let mut pixelNumber =1;
+
+          
+    pixelNumber = 0;
+    while pixelNumber <maxDotts {
+         pixelNumber+=1;
+              
+        println!("done.");
+        draw_pixel_cmyk(cy,cx,ccyan,cmagenta,cyellow,ck,calpha);
     }
-    println!("{datastring}");
+    Ok(())
 }
 
