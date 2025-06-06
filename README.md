@@ -17,3 +17,4 @@ Jun 5th 25 - 12:32pm GMT - Added idea for Raycaster from Google Gemini . <br />
 Jun 5th 25 - 8:31pm  GMT - main.rs Updated .<br />
 Jun 6th 25 - 9:29pm  GMT - files.rs added and updated . <br />
 Jun 6th 25 - 11:57am GMT - Added an arraystore to files.rs . <br />
+Jun 6rg 25 - 4:48pm  GMT - Nibb Updated to half finished.<br/>
