@@ -4,7 +4,7 @@ use plotters::chart::{self, ChartState};
 use plotters::coord::cartesian;
 use plotters::{data, prelude::*};
 
-
+mod files;
 use std::fs::File;
 use std::io::BufWriter;
 
@@ -25,6 +25,7 @@ pub fn draw_pixel_cmyk(
 
 
 fn main()  -> Result<(), Box<dyn std::error::Error>> {
+    files::run();
     let mut cy :f64;
     let mut cx : f64;
     let mut ccyan : f32;
