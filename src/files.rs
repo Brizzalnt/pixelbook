@@ -21,15 +21,9 @@ pub fn read_file_into_vec_by_separator(
 }
 
 pub fn run() {
-    let filepath = "my_data.txt"; // Replace with your file path
-    let separator = ','; // Replace with your desired separator character
+    let filepath = "my_file.dott";
+    let separator = ','; 
 
-    // Create a dummy file for demonstration
-    // In a real application, this file would already exist.
-    if let Err(e) = std::fs::write(filepath, "item1, item2,item3 , item4") {
-        eprintln!("Error creating dummy file: {}", e);
-        return;
-    }
 
 
     match read_file_into_vec_by_separator(filepath, separator) {
@@ -44,8 +38,5 @@ pub fn run() {
         }
     }
 
-    // Clean up the dummy file
-    if let Err(e) = std::fs::remove_file(filepath) {
-        eprintln!("Error removing dummy file: {}", e);
-    }
+
 }
