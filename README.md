@@ -19,3 +19,4 @@ Jun 6th 25 - 9:29pm  GMT - files.rs added and updated . <br />
 Jun 6th 25 - 11:57am GMT - Added an arraystore to files.rs . <br />
 Jun 6th 25 - 4:48pm  GMT - Nibb Updated to half finished.<br />
 Jun 6th 25 - 6:54pm  GMT - Nibb Completed almost . <br />
+Jun 7th 25 - 12:05pm GMT - Nibb and Main combined . <br />
