@@ -33,7 +33,7 @@ pub fn read_file_into_vec_by_separator(
 
 fn main()  -> Result<(), Box<dyn std::error::Error>> {
     let mut filepath = "";
-    filepath = "glow_nibb.dott";
+    filepath = "glow.nibb";
     let separator = ','; 
     let mut arraystore: [f32;8] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
     let mut offset_x = 16;
