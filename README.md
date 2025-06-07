@@ -20,4 +20,5 @@ Jun 6th 25 - 11:57am GMT - Added an arraystore to files.rs . <br />
 Jun 6th 25 - 4:48pm  GMT - Nibb Updated to half finished.<br />
 Jun 6th 25 - 6:54pm  GMT - Nibb Completed almost . <br />
 Jun 7th 25 - 12:05pm GMT - Nibb and Main combined . <br />
-Jun 7th 25 - 1:55pm  GMT - NIbb location x,y added . <br />
+Jun 7th 25 - 1:55pm  GMT - Nibb location file x,y added 'locf' for short . <br />
+Jun 7th 25 - 3:18pm  GMT - Start of glowNibb 'node'/layer . <br />
