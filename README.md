@@ -2,11 +2,6 @@ Pixelbook Softwares<br />
 by Edward (brizzalnt) Taylor<br />
 of Open Ideas.<br />
 <br />
-Written in Rust<br />
-Previous Versions Written in<br />
-Swift, Xojo, Javascript...<br />
-To Test Speed / Compatability.<br />
-
 
 Updates ...<br />
 Note : This is Unfinished Work<br />
