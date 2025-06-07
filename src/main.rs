@@ -25,22 +25,6 @@ pub fn read_file_into_vec_by_separator(
     Ok(result)
 }
 
-
-
-pub fn draw_pixel_cmyk(
-    ax: u32,        // X-coordinate
-    ay: u32,        // Y-coordinate
-    acyan: f32,     // Cyan component (0.0 to 1.0)
-    amagenta: f32,  // Magenta component (0.0 to 1.0)
-    ayellow: f32,   // Yellow component (0.0 to 1.0)
-    ak: f32,        // Black (Key) component (0.0 to 1.0)
-    aalpha: f32,
-) {
-
-
-}
-
-
 fn main()  -> Result<(), Box<dyn std::error::Error>> {
     let filepath = "my_file.dott";
     let separator = ','; 
